@@ -2,29 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(233, 47%, 7%);
 }
 
 #card {
     position: absolute;
-    left: 15%;
-    top: 25vh;
-    height: calc(45vh);
-    width: 70%;
+    left: 10%;
+    height: fit-content;
+    width: 80%;
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
     vertical-align: middle;
     margin: auto;
+    overflow: hidden;
 }
 
 #card-text {
+    height: 350px;
     width: 40%;
     margin: 50px;
     display: inline-block;
 }
 
 #card-img {
-    width: 45%;
+    height: 450px;
+    width: 50%;
     background-image: url('images/image-header-desktop.jpg');
     background-size: cover;
     background-color: hsla(277, 49%, 53%, 0.8);
@@ -32,7 +39,6 @@ body {
     border-radius: 0 10px 10px 0;
     display: block;
     float: right;
-    height: 100%;
 }
 
 h1 {
@@ -84,4 +90,51 @@ p {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1439px) {
+    body {
+        justify-content: none;
+    }
+    #card {
+        width: 80%;
+        top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+        overflow: visible;
+        text-align: center;
+    }
+
+    #card-text {
+        width: 80%;
+        height: 50%;
+        padding: 10%;
+        margin: 0;
+    }
+
+    #card-img {
+        position: relative;
+        border-radius: 10px 10px 0 0;
+        height: 400px;
+        width: 100%;
+        display: block;
+        float: left;
+    }
+
+    .info {
+        margin: 0;
+        width: 30%;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .info {
+        width: 100%;
+    }
 }
