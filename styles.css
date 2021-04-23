@@ -11,9 +11,8 @@ body {
 }
 
 #card {
-    position: absolute;
     left: 10%;
-    height: fit-content;
+    height: 430px;
     width: 80%;
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
@@ -25,15 +24,16 @@ body {
 #card-text {
     height: 350px;
     width: 40%;
-    margin: 50px;
+    margin: 40px;
     display: inline-block;
 }
 
 #card-img {
-    height: 450px;
+    height: 430px;
     width: 50%;
     background-image: url('images/image-header-desktop.jpg');
     background-size: cover;
+    background-position: 70% 30%;
     background-color: hsla(277, 49%, 53%, 0.8);
     background-blend-mode: overlay;
     border-radius: 0 10px 10px 0;
@@ -69,7 +69,7 @@ p {
 
 .info {
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .stats-heading {
@@ -92,14 +92,14 @@ p {
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
     body {
         justify-content: none;
     }
     #card {
         width: 80%;
-        top: 50px;
-        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-bottom: 25px;
         display: flex;
         flex-direction: column-reverse;
         height: fit-content;
@@ -117,7 +117,7 @@ p {
     #card-img {
         position: relative;
         border-radius: 10px 10px 0 0;
-        height: 400px;
+        height: 300px;
         width: 100%;
         display: block;
         float: left;
@@ -129,11 +129,13 @@ p {
     }
 
     .attribution {
-        display: none;
+        left: 0;
+        transform: none;
+        position: relative;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 680px) {
     .info {
         width: 100%;
     }
